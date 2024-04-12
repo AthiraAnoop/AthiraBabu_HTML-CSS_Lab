@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form with Style</title>
+<style>
+   
+    body {
+        margin: 0;
+        height: 100vh;
+        background: url('https://scx1.b-cdn.net/csz/news/800/2017/theoreticala.jpg') no-repeat center center fixed; 
+        background-size: cover;
+    }
+
+    form {
+        border: 2px solid #fff; 
+        padding: 20px;
+        width: 300px;
+        margin: 50px auto;
+        background-color: rgba(255, 255, 255, 0.10); 
+    }
+
+    
+    input[type="text"], input[type="email"], input[type="number"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"]:focus, input[type="email"]:focus, input[type="number"]:focus {
+        background-color: rgba(70, 130, 180, 0.35); 
+    }
+   
+   
+    input[type="submit"], input[type="reset"] {
+        padding: 10px 20px;
+        margin-right: 10px;
+    }
+</style>
+</head>
+<body>
+    
+<form  action="#" method="POST">
+    <h3>Create Gmail Account</h3>
+    
+    <input type="text" id="name" name="name" placeholder="Full Name">
+    <input type="number" id="phone" name="phone" placeholder="Contact Number">
+    <input type="email" id="email" name="email" placeholder="Enter email id">
+    <input type="reset" value="Reset">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

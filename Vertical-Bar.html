@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Vertical Bar Chart</title>
+   <style>
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar-chart-container {
+    text-align: center;
+    background-color: #f0f0f0;
+    height: 400px;
+    padding-top: 20px;
+}
+
+.chart-label {
+    position: absolute;
+    bottom: -100px;
+    left:40%;
+    transform: translateX(-50%);
+    font-size: 24px;
+}
+
+.bar-chart {
+    position: relative;
+    width: 400px;
+    height: 300px; 
+    
+}
+
+.bar {
+    position: absolute;
+    width: 30px; 
+    background-color: #fff; 
+    animation: grow 2s forwards; 
+}
+#bar-30::before, #bar-40::before, #bar-80::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #d3cdcd;
+}
+#bar-30::before {
+    height: var(--bar-height);
+}
+
+#bar-40::before {
+    height: var(--bar-height);
+}
+
+#bar-80::before {
+    height: var(--bar-height);
+}
+.bar span {
+    position: absolute;
+    bottom: -20px; 
+    left: 0px; 
+    width: 100%;
+    text-align: center;
+}
+
+@keyframes grow {
+    from {
+        height: 0;
+        bottom: 0; 
+    }
+    to {
+        height: 100%; 
+        bottom: 0; 
+    }
+}
+
+#bar-30 {
+    --bar-height: 30%; 
+    left: 50px; 
+}
+
+#bar-40 {
+    --bar-height: 40%; 
+    left: 150px; 
+}
+
+#bar-80 {
+    --bar-height: 80%; 
+    left: 250px; 
+}
+
+
+
+   </style>
+</head>
+<body>
+    <div class="bar-chart-container">
+        
+        <div class="bar-chart">
+            <div class="bar" id="bar-30"><span>30%</span></div>
+            <div class="bar" id="bar-40"><span>40%</span></div>
+            <div class="bar" id="bar-80"><span>80%</span></div>
+            <h1 class="chart-label"> Bar Plot</h1>
+        </div>
+        
+    </div>
+</body>
+</html>

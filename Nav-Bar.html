@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Navigation Menu with Dropdowns</title>
+<style>
+   
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f4f4;
+    }
+    header {
+        background: red;
+        color: #fff;
+        padding: 10px 120px;
+        text-align: right;
+    }
+    nav {
+        background: #555;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+    nav a {
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: block;
+    }
+
+    
+    nav a:hover {
+        color: #fff; 
+        background-color: #000; 
+    }
+
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    
+    .dropdown-content a {
+        color: blue;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+   
+    .dropdown:hover .dropdown-content {display: block;}
+
+    
+    .dropdown:hover > a {
+        color: #fff; 
+    }
+
+</style>
+</head>
+<body>
+<header>
+    <h1>Demo of Dropdown</h1>
+</header>
+<nav>
+    <a href="#">Link 1</a>
+    <div class="dropdown">
+        <a href="#">Link 2</a>
+        <div class="dropdown-content">
+            <a href="#">DD_Link_1</a>
+            <a href="#">DD_Link_2</a>
+            <a href="#">DD_Link_3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <a href="#">Link 3</a>
+        <div class="dropdown-content">
+            <a href="#">DD_Link_1</a>
+            <a href="#">DD_Link_2</a>
+            <a href="#">DD_Link_3</a>
+        </div>
+    </div>
+</nav>
+</body>
+</html>
